@@ -2,7 +2,7 @@ let sketch = function(p) {
 
 
   p.setup = function() {
-    p.createCanvas(1000, 500);
+    p.createCanvas(1025, 525);
     p.background(0);
     p.frameRate(60);
   };
@@ -23,9 +23,9 @@ let sketch = function(p) {
 
         p.noStroke();
         p.fill(
-          p.int(p.sin( (p.frameCount + (x + y) )  * 0.004 + (x + y))  * 127 + 127),
-          p.int(p.sin( (p.frameCount + (x + y) )  * 0.009 + (x + y)) * 127 + 127),
-          p.int(p.sin( (p.frameCount + (x + y) )  * 0.01 + (x + y)) * 127 + 127)
+          p.int(p.sin( (p.frameCount * 1.5 + (x + y) )  * 0.004 ) * 127 + 127),
+          p.int(p.sin( (p.frameCount * 1.5 + (x + y) )  * 0.007 ) * 127 + 127),
+          p.int(p.sin( (p.frameCount * 1.5 + (x + y) )  * 0.008 ) * 127 + 127)
         );
         //rect(x - 1, y - 1, 3, 3);
         //p.stroke(0);
