@@ -10,9 +10,15 @@ let sketch = function(p) {
     let r = 100;  
     let g = p.map(p.mouseX,0,p.width,0,255,true);
     let b = p.map(p.mouseY,0,p.height,0,255,true);
-    p.background(0,10);
+    //p.background(0,10);
     p.fill(r,g,b);
     p.rect(p.mouseX, p.mouseY, 50, 50);
+  };
+
+  p.keyTyped = function(){
+    if (p.key === 'a') {
+      p.background(0);
+    }
   };
 };
 
@@ -30,8 +36,8 @@ let sketch2 = function(p) {
     p.rect(p.mouseX, p.mouseY, 50, 50);
   };
   p.keyTyped = function(){
-    if (p.key === 's') {
-      p.saveCanvas('myCanvas', 'png');
+    if (p.key === 'a') {
+      p.background(0);
     }
   };
 };
