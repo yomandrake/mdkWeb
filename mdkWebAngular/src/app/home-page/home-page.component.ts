@@ -46,7 +46,7 @@ export class HomePageComponent implements OnInit {
             //p.stroke(0);
             p.square(x*20,y*20,20);
           }
-        };
+        }; 
       };
     
       p.keyTyped = function(){
