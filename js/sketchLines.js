@@ -69,4 +69,4 @@ let sketch = function(p) {
 };
 
 
-new p5(sketch, 'container');
+mySketch = new p5(sketch, 'container');

@@ -42,5 +42,5 @@ let sketch2 = function(p) {
   };
 };
 
-new p5(sketch, 'container');
-new p5(sketch2, 'container2');
+mySketch = new p5(sketch, 'container');
+mySketch2 = new p5(sketch2, 'container2');
