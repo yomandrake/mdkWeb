@@ -34,6 +34,46 @@ function keyTyped() {
 }
 */
 
+
+let sketch2 = function() {
+  let x = this.frameCount;
+  let r = this.int(sin( x * 0.01 ) * 45 + 127);
+  let g = this.int(sin( x * 0.02 ) * 127 + 127);
+  let b = this.int(sin( x * 0.03 ) * 127 + 127);
+  
+  let gridSize = 35;
+  for (let x = gridSize; x <= this.width - gridSize; x += gridSize) {
+    for (let y = gridSize; y <= this.height - gridSize; y += gridSize) {
+      this.noStroke();
+      this.fill(255);
+      //rect(x - 1, y - 1, 3, 3);
+      this.stroke(r,g,b,50);
+      this.line(x, y, this.mouseX, this.mouseY);
+    }
+  };
+};
+let sketch3 = function(p) {
+  p.draw = function() {
+    let x = p.frameCount;
+    let r = p.int(p.sin( x * 0.01 ) * 45 + 127);
+    let g = p.int(p.sin( x * 0.02 ) * 127 + 127);
+    let b = p.int(p.sin( x * 0.03 ) * 127 + 127);
+    
+    let gridSize = 35;
+    for (let x = gridSize; x <= p.width - gridSize; x += gridSize) {
+      for (let y = gridSize; y <= p.height - gridSize; y += gridSize) {
+        p.noStroke();
+        p.fill(255);
+        //rect(x - 1, y - 1, 3, 3);
+        p.stroke(r,g,b,50);
+        p.line(x, y, p.mouseX, p.mouseY);
+      }
+    };
+  };
+}
+
+
+
 let sketch = function(p) {
 
 
