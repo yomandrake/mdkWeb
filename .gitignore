@@ -1,3 +1,5 @@
 #Added for VS
 .vs/*
 */.vs/*
+.vscode/*
+*/.vscode/*

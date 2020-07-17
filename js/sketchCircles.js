@@ -1,8 +1,8 @@
-let isWColor = false;
+let isWColor = true;
 
 let sketch = function(p) {
 
-  
+  let fs = false;
 
   p.setup = function() {
     p.createCanvas(700, 920);
@@ -39,6 +39,20 @@ let sketch = function(p) {
 
     if (p.key === 'c') {
       isWColor = !isWColor;
+    }
+
+    if (p.key === 'f') {
+    	if(fs === false){
+    		p.fullscreen(!fs);
+    		//p.resizeCanvas(p.windowWidth, p.windowHeight);
+        p.resizeCanvas(window.innerWidth, window.innerHeight);
+        p.background(0);
+    	}else{
+    		p.fullscreen(!fs);
+        p.resizeCanvas(700, 920);
+        p.background(0);
+    	}
+    	fs = !fs;    	
     }
   };
 };

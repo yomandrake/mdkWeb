@@ -76,6 +76,7 @@ let sketch3 = function(p) {
 
 let sketch = function(p) {
 
+	let fs = false;
 
   p.setup = function() {
     p.createCanvas(700, 920);
@@ -104,6 +105,17 @@ let sketch = function(p) {
   p.keyTyped = function(){
     if (p.key === 's') {
       p.saveCanvas('myCanvas', 'png');
+    };
+    if (p.key === 'f') {
+    	if(fs === false){
+    		p.fullscreen(!fs);
+    		//p.resizeCanvas(p.windowWidth, p.windowHeight);
+    		p.resizeCanvas(window.innerWidth, window.innerHeight);
+    	}else{
+    		p.fullscreen(!fs);
+    		p.resizeCanvas(700, 920);
+    	}
+    	fs = !fs;    	
     }
   };
 };

@@ -1,7 +1,7 @@
-let angle = 0;
-let myTexture;
-let caxixiCase3d_bottom;
-let caxixiCase3d_top;
+var angleCX = 0;
+var myTexture;
+var caxixiCase3d_bottom;
+var caxixiCase3d_top;
 var easycam;
 
 function preload() {
@@ -17,13 +17,14 @@ function setup() {
 
   pixelDensity(1);
   var canvas = createCanvas(windowWidth*0.8, windowHeight*0.8, WEBGL);
-  canvas.parent('p5Container');
+  //canvas.parent(document.getElementById('p5Container'));
   setAttributes('antialias', true);
   
   console.log(Dw);
   console.log(Dw.EasyCam.INFO);
 
   easycam = createEasyCam();
+  document.getElementById('p5Container').appendChild(document.getElementById('defaultCanvas0'))
 }
 
 function draw() {
@@ -86,13 +87,13 @@ function draw() {
     
   pop();
 
-  angle += 0.009;
+  angleCX += 0.009;
 
 }
 
 function windowResized() {
   resizeCanvas(windowWidth*0.8, windowHeight*0.8);
-  easycam.setViewport([0,0,windowWidth*0.8, windowHeight*0.8]);
+  //easycam.setViewport([0,0,windowWidth*0.8, windowHeight*0.8]);
 }
 
 
